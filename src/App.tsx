@@ -15,6 +15,8 @@ import GamePage from "./pages/GamePage/GamePage";
 import ResultsPage from "./pages/ResultsPage/ResultsPage";
 import SettingsPage from "./pages/SettingsPage/SettingsPage";
 
+import CookieConsent from "react-cookie-consent";
+
 function App() {
     const userId = getUserId();
 
@@ -33,6 +35,18 @@ function App() {
                 <Route path="/:userId/settings" element={<SettingsPage />} />
 
             </Routes>
+
+            <CookieConsent
+                location="bottom"
+                buttonText="Accept"
+                declineButtonText="Reject"
+                enableDeclineButton
+                cookieName="blackjack_gdpr_consent"
+                expires={150}
+                >
+                This application stores your consent preference locally to ensure proper functionality.
+                No tracking or third-party cookies are used.
+            </CookieConsent>
         </Router>
     );
 }
