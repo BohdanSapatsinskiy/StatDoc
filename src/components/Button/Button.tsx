@@ -1,14 +1,22 @@
 import React from "react";
 import styles from './Button.module.css';
 
-type BaseProps = {
+export type BaseProps = {
   children: React.ReactNode;
   className?: string;
 };
 
 type ButtonProps = BaseProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button: React.FC<ButtonProps> = ({
+/**
+ * Reusable UI button component.
+ *
+ * Extends the default HTML button element and supports all standard
+ * button attributes (onClick, type, disabled, etc.).
+ *
+ * This component is used across the application as a base interactive element.
+ */
+export const Button: React.FC<ButtonProps> = ({
   children,
   className,
   onClick,
@@ -30,5 +38,3 @@ const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
-
-export default Button;

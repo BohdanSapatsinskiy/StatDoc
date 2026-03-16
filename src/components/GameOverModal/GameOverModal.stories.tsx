@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import GameOverModal from "./GameOverModal";
+import {GameOverModal} from "./GameOverModal";
 
 const meta: Meta<typeof GameOverModal> = {
   title: "Components/GameOverModal",

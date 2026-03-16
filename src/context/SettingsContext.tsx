@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 type Difficulty = "normal" | "hard";
 
-type Settings = {
+export type Settings = {
   difficulty: Difficulty;
   volume: number; // 0–100
   setDifficulty: (d: Difficulty) => void;
@@ -20,6 +20,14 @@ const SettingsContext = createContext<Settings>({
   setVolume: () => {},
 });
 
+/**
+ * React context used to store global application settings.
+ *
+ * Provides access to:
+ * - Game difficulty level
+ * - Background music volume
+ * - Methods to update settings
+ */
 export const SettingsProvider = ({ children }: { children: React.ReactNode }) => {
   const [difficulty, setDifficulty] = useState<Difficulty>(() => {
     return (localStorage.getItem("difficulty") as Difficulty) || "normal";

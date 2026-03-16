@@ -9,6 +9,16 @@ export type GameResult = {
   date: string;
 };
 
+/**
+ * Custom hook for managing Blackjack game results.
+ *
+ * Responsible for:
+ * - Loading saved results from localStorage
+ * - Storing new game results
+ * - Calculating the final outcome of a game
+ *
+ * Each result is associated with a user ID taken from the URL parameters.
+ */
 export const useGameResults = () => {
   const [results, setResults] = useState<GameResult[]>([]);
   const { userId } = useParams<{ userId: string }>();

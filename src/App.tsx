@@ -10,10 +10,10 @@ export const getUserId = () => {
 
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
-import StartPage from "./pages/StartPage/StartPage";
-import GamePage from "./pages/GamePage/GamePage";
-import ResultsPage from "./pages/ResultsPage/ResultsPage";
-import SettingsPage from "./pages/SettingsPage/SettingsPage";
+import {StartPage} from "./pages/StartPage/StartPage";
+import {GamePage} from "./pages/GamePage/GamePage";
+import {ResultsPage} from "./pages/ResultsPage/ResultsPage";
+import {SettingsPage} from "./pages/SettingsPage/SettingsPage";
 
 import CookieConsent from "react-cookie-consent";
 

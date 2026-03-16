@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "docs": "typedoc"
   },
   "dependencies": {
     "formik": "^2.4.9",
@@ -41,6 +42,7 @@
     "license-checker": "^25.0.1",
     "playwright": "^1.58.2",
     "storybook": "^10.2.19",
+    "typedoc": "^0.28.17",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",

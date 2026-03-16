@@ -1,7 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { useSettings } from "../context/SettingsContext";
 
-const MusicPlayer = ({ src }: { src: string }) => {
+/**
+ * Background music player component.
+ *
+ * Handles playback of background music in the application.
+ * The component creates an HTMLAudioElement and manages its lifecycle.
+ *
+ * Features:
+ * - Automatically loops the provided audio track
+ * - Syncs volume with the application settings
+ * - Starts playback after the first user interaction
+ *   (required due to browser autoplay restrictions)
+ *
+ * Uses the SettingsContext to retrieve the current volume level.
+ */
+
+export const MusicPlayer = ({ src }: { src: string }) => {
   const { volume } = useSettings();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [started, setStarted] = useState(false);
@@ -44,4 +59,3 @@ const MusicPlayer = ({ src }: { src: string }) => {
   return null;
 };
 
-export default MusicPlayer;

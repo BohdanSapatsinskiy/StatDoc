@@ -1,0 +1,11 @@
+{
+  "entryPoints": ["src"],
+  "entryPointStrategy": "expand",
+  "exclude": [
+    "**/*.stories.tsx",
+    "**/App.tsx",
+    "**/main.tsx"
+  ],
+  "readme": "README.md",
+  "out": "docs"
+}

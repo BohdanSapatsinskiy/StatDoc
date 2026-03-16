@@ -10,7 +10,13 @@ export interface Card {
   image: string; 
 }
 
-
+/**
+ * Generates a standard 52-card deck.
+ *
+ * Each card includes its rank, suit and image path.
+ *
+ * @returns {Card[]} Array of card objects
+ */
 const generateDeck = (): Card[] => {
   const suits: Suit[] = ["clubs", "diamonds", "hearts", "spades"];
   const ranks: Rank[] = [
@@ -41,6 +47,15 @@ const shuffle = (array: Card[]) => {
   return newArr;
 };
 
+/**
+ * Custom hook for managing the Blackjack card deck.
+ *
+ * Responsible for:
+ * - Creating a new deck
+ * - Shuffling cards
+ * - Drawing cards from the deck
+ * - Resetting the deck
+ */
 export const useDeck = () => {
   const [deck, setDeck] = useState<Card[]>(shuffle(generateDeck()));
 

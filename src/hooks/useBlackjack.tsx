@@ -4,6 +4,21 @@ import type { Card } from "./useDeck";
 import { useSettings } from "../context/SettingsContext";
 import { useGameResults } from "../hooks/useGameResults";
 
+/**
+ * Custom hook that manages the core Blackjack game logic.
+ *
+ * Responsible for:
+ * - Managing player and dealer cards
+ * - Calculating scores
+ * - Handling player actions (hit / stand)
+ * - Controlling dealer behavior
+ * - Determining the game result
+ *
+ * The hook also integrates with:
+ * - Deck management (`useDeck`)
+ * - Game settings (`useSettings`)
+ * - Game results history (`useGameResults`)
+ */
 export const useBlackjack = () => {
   const { deck, drawCard, resetDeck, setDeck } = useDeck();
 

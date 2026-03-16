@@ -1,6 +1,6 @@
 import styles from './Card.module.css';
 
-type CardProps = {
+export type CardProps = {
   front: string;        // шлях до лиць
   back?: string; // шлях до заду
   isFaceUp?: boolean;   // true - показує front, false - back
@@ -9,7 +9,16 @@ type CardProps = {
 
 const defaultBack = "/src/assets/card/back/card_back_1.png";
 
-const Card = ({ front, back = defaultBack, isFaceUp = true}: CardProps) => {
+/**
+ * Playing card component.
+ *
+ * Displays either the front or back side of a card
+ * depending on the `isFaceUp` property.
+ *
+ * Used in the game interface to represent player
+ * and dealer cards.
+ */
+export const Card = ({ front, back = defaultBack, isFaceUp = true}: CardProps) => {
   return (
 
       <img
@@ -20,5 +29,3 @@ const Card = ({ front, back = defaultBack, isFaceUp = true}: CardProps) => {
 
   );
 };
-
-export default Card;

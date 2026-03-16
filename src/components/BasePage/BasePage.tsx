@@ -1,12 +1,22 @@
 import type { ReactNode } from "react";
 import styles from "./BasePage.module.css";
 
-type Props = {
+export type PageProps = {
   children: ReactNode;
   background?: string;
 };
 
-const BasePage = ({ children, background }: Props) => {
+/**
+ * Base layout component for pages.
+ *
+ * Provides a common wrapper for application pages.
+ * Supports optional background image and renders
+ * all child components inside a styled container.
+ *
+ * Used as a structural layout component to ensure
+ * consistent page styling across the application.
+ */
+export const BasePage = ({ children, background }: PageProps) => {
   return (
     <div
       className={styles.table}
@@ -17,4 +27,3 @@ const BasePage = ({ children, background }: Props) => {
   );
 };
 
-export default BasePage;

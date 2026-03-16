@@ -1,11 +1,25 @@
-import BasePage from "../../components/BasePage/BasePage";
-import Button from "../../components/Button/Button";
+import {BasePage} from "../../components/BasePage/BasePage";
+import {Button} from "../../components/Button/Button";
 import bg from "../../assets/background/main-background.png";
 import { useNavigate } from "react-router-dom";
 import { useGameResults } from "../../hooks/useGameResults";
 import styles from './ResultPage.module.css';
 
-const ResultsPage = () => {
+/**
+ * Results page displaying the history of Blackjack games.
+ *
+ * This page retrieves stored game results using the `useGameResults`
+ * hook and displays them in a table format.
+ *
+ * Features:
+ * - Shows player and dealer scores
+ * - Displays the final game outcome
+ * - Shows the date of each played game
+ * - Provides navigation back to the main menu
+ *
+ * Results are loaded from localStorage through the results hook.
+ */
+export const ResultsPage = () => {
   const { results } = useGameResults();
   const navigate = useNavigate();
 
@@ -47,4 +61,3 @@ const ResultsPage = () => {
   );
 };
 
-export default ResultsPage;
