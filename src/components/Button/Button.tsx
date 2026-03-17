@@ -6,7 +6,7 @@ export type BaseProps = {
   className?: string;
 };
 
-type ButtonProps = BaseProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
+export type ButtonProps = BaseProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 /**
  * Reusable UI button component.

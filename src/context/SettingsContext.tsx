@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-type Difficulty = "normal" | "hard";
+export type Difficulty = "normal" | "hard";
 
 export type Settings = {
   difficulty: Difficulty;
